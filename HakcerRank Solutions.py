@@ -13,4 +13,19 @@ def pageCount(n, p):
     return min(p//2,(n//2)-(p//2))
 
 
+# Counting Valleys Solution
+def countingValleys(steps, path):
+    # Write your code here
+    L=0
+    V=0
+    for s in path:
+        if s == 'U':
+            L += 1
+           
+            if L == 0:
+                V += 1
+        else:
+            L -= 1
+    return V
+
 
