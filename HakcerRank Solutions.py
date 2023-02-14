@@ -29,3 +29,15 @@ def countingValleys(steps, path):
     return V
 
 
+
+# Electronic Shop Solution
+def getMoneySpent(keyboards, drives, b):
+    #
+    # Write your code here.
+    #
+    ans = -1
+    for x in keyboards:
+        for y in drives:
+            if x + y <= b:
+                ans = max(ans, x + y)
+    return ans
